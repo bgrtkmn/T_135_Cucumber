@@ -2,6 +2,7 @@ package utils;
 
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.WaitOptions;
 import io.appium.java_client.touch.offset.PointOption;
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.OutputType;
@@ -10,6 +11,7 @@ import org.openqa.selenium.TakesScreenshot;
 import java.io.File;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
 
 public class ReusableMethods {
@@ -43,6 +45,16 @@ public class ReusableMethods {
         // save the screenshot to the path given
         FileUtils.copyFile(source, finalDestination);
         return target;
+    }
+
+    public static void ekranKaydirmaMethodu(int xbaslangic,int ybaslangic,int beklemeSuresi,int xbitis,int ybitis ){
+        TouchAction action=new TouchAction<>(Driver.getAndroidDriver());
+        action.
+                press(PointOption.point(xbaslangic,ybaslangic))
+                .waitAction(WaitOptions.waitOptions(Duration.ofMillis(beklemeSuresi)))
+                .moveTo(PointOption.point(xbitis,ybitis))
+                .release()
+                .perform();
     }
 
 
