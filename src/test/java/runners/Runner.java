@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/Features",
         glue = "stepdefinitions",
         tags = "@ab",
-        dryRun =true
+        dryRun =false
 
         // eger dry run true ise: features dosyalarinda tanimlanmayan dosyalari tanimlamak icin dry run true olacak
         // eger test failed ise eksik adimlari verir eger test passed ise eksik adim yok demektir
