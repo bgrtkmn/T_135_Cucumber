@@ -8,9 +8,9 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         plugin = {"pretty",
                 "json:target/cucumber.json",},
-        features = {"src/test/resources/Features/MobileFeature","src/test/resources/Features/UIFeature"},
+        features = "src/test/resources/Features",
         glue = "stepdefinitions",
-        tags = "@test or @uiTest",
+        tags = "@ab",
         dryRun =true
 
         // eger dry run true ise: features dosyalarinda tanimlanmayan dosyalari tanimlamak icin dry run true olacak
