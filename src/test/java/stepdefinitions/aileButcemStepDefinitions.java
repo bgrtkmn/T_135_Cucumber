@@ -50,6 +50,57 @@ public class aileButcemStepDefinitions {
        Driver.quitAppiumDriver();
     }
 
+    @Given("anasayfadaki arti butonuna tiklayin")
+    public void anasayfadaki_arti_butonuna_tiklayin() throws InterruptedException {
+        //541 1801
+        Thread.sleep(4000);
+        ReusableMethods.tiklamaMethodu(541,1728,500);
+    }
+    @Given("{string} bolumune tiklayin")
+    public void gelir_ekle_bolumune_tiklayin(String eklemeSecenegi) {
+     ReusableMethods.scrollWithUiScrollableAndClick(eklemeSecenegi);
+    }
+
+    @Given("basariyla eklendigini dogrulayin")
+    public void basariyla_eklendigini_dogrulayin() {
+
+    }
+
+
+    @Given("Gelir ekleme sayfasinda aciklama kismina {string} gonderilir")
+    public void gelir_ekleme_sayfasinda_aciklama_kismina_gonderilir(String aciklama) {
+        page.aciklamaKutusu.sendKeys(aciklama);
+
+    }
+    @Given("Gelir ekleme sayfasinda Gelir tipi {string} secilir")
+    public void gelir_ekleme_sayfasinda_gelir_tipi_secilir(String gelirTipi) throws InterruptedException {
+        page.duzenliDuzensizKutusu.click();
+        Thread.sleep(1000);
+        ReusableMethods.scrollWithUiScrollableAndClick(gelirTipi);
+    }
+    @Given("Gelir ekleme sayfasinda Kategori bolumnden {string} secilir")
+    public void gelir_ekleme_sayfasinda_kategori_bolumnden_secilir(String kategori) throws InterruptedException {
+        page.kategoriKutusu.click();
+        Thread.sleep(1000);
+        ReusableMethods.scrollWithUiScrollableAndClick(kategori);
+
+    }
+    @Given("Gelir ekleme sayfasinda tarih secme bolumunden {int} {string} tarih secimi yapilir")
+    public void gelir_ekleme_sayfasinda_tarih_secme_bolumunden_tarih_secimi_yapilir(Integer bitis, String gun) throws InterruptedException {
+        page.tarihKutusu.click();
+        Thread.sleep(1500);
+        page.tarihSecmeMethodu(bitis);
+        ReusableMethods.scrollWithUiScrollableAndClick(gun);
+    }
+    @Given("Gelir ekleme sayfasinda tutar {string} degeri girilir")
+    public void gelir_ekleme_sayfasinda_tutar_degeri_girilir(String tutar) {
+        page.tutarKutusu.sendKeys(tutar);
+    }
+    @Given("Gelir ekleme sayfasinda {string} butonuna tiklanir")
+    public void gelir_ekleme_sayfasinda_butonuna_tiklanir(String kaydet) {
+      ReusableMethods.scrollWithUiScrollableAndClick(kaydet);
+    }
+
 
 
 }

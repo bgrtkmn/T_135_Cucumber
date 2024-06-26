@@ -54,6 +54,33 @@ public class AileButcemPage {
     @FindBy(xpath = "//*[@text='Kaydet']")
     public MobileElement kaydetButton;
 
+    @FindBy(xpath = "(//*[@class='android.widget.EditText'])[1]")
+    public MobileElement aciklamaKutusu;
+
+    @FindBy(xpath = "(//*[@class='android.widget.EditText'])[2]")
+    public MobileElement tutarKutusu;
+
+    @FindBy(xpath = "(//*[@class='android.view.ViewGroup'])[10]")
+    public MobileElement duzenliDuzensizKutusu;
+
+    @FindBy(xpath = "(//*[@class='android.view.ViewGroup'])[11]")
+    public MobileElement kategoriKutusu;
+
+    @FindBy(xpath = "(//*[@class='android.view.ViewGroup'])[12]")
+    public MobileElement tarihKutusu;
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -97,5 +124,12 @@ public class AileButcemPage {
             ReusableMethods.ekranKaydirmaMethodu(906,1001,750,139,1001);
         }
         ReusableMethods.scrollWithUiScrollableAndClick("Giriş Yap");
+    }
+
+    public void tarihSecmeMethodu(int forBitis){
+        for (int i = 0; i < forBitis; i++) {
+            ReusableMethods.ekranKaydirmaMethodu(818,1052,750,263,1052);
+            //  818,1052.263,1052
+        }
     }
 }
