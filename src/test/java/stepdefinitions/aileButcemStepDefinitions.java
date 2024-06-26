@@ -33,13 +33,23 @@ public class aileButcemStepDefinitions {
     public void uygulamaya_kullanici_bilgileriyle_giris_yapildigini_dogrulayin() {
         Assert.assertTrue(page.girisYazisiDogrulama.isDisplayed());
     }
-    @Given("sol kisimdaki menuden hesabim bolumune gidin")
-    public void sol_kisimdaki_menuden_hesabim_bolumune_gidin() {
-
+    @Given("sol kisimdaki menuden {string} bolumune gidin")
+    public void sol_kisimdaki_menuden_hesabim_bolumune_gidin(String menuSecim) throws InterruptedException {
+        Thread.sleep(5000);
+        page.hamburgerMenu.click();
+        ReusableMethods.scrollWithUiScrollableAndClick(menuSecim);
     }
-    @Given("hesabim sayfasindaki bilgileri degistirerek degisikleri kaydedin ve değişikleri dogrulayin")
-    public void hesabim_sayfasindaki_bilgileri_degistirerek_degisikleri_kaydedin_ve_değişikleri_dogrulayin() {
-
+    @Given("hesabim sayfasindaki bilgileri degistirerek {string} {string} {string} {string} {string} degisikleri kaydedin ve değişikleri dogrulayin")
+    public void hesabim_sayfasindaki_bilgileri_degistirerek_degisikleri_kaydedin_ve_değişikleri_dogrulayin(String isim,String soyisim,String sehir,String yas,String meslek) {
+      page.hesabimTextBoxSendKeysMethod(isim,soyisim,sehir,yas,meslek);
+      page.kutuDogrulamaMethodu(isim,soyisim,sehir,yas,meslek);
     }
+
+    @Given("uygulamayi kapatir")
+    public void uygulamayi_kapatir() {
+       Driver.quitAppiumDriver();
+    }
+
+
 
 }
