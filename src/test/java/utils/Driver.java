@@ -34,7 +34,7 @@ public class Driver {
         if (appiumDriver == null) {
 
             DesiredCapabilities caps =new DesiredCapabilities();
-            caps.setCapability(MobileCapabilityType.UDID,"emulator-5554");
+            caps.setCapability(MobileCapabilityType.UDID,"8ec2222704379e34");
             caps.setCapability("appPackage",ConfigReader.getProperty("aileButcemPackage"));
             caps.setCapability("appActivity",ConfigReader.getProperty("aileButcemActivity"));
             caps.setCapability(MobileCapabilityType.NO_RESET,false);

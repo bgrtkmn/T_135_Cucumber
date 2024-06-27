@@ -54,7 +54,7 @@ public class aileButcemStepDefinitions {
     public void anasayfadaki_arti_butonuna_tiklayin() throws InterruptedException {
         //541 1801
         Thread.sleep(4000);
-        ReusableMethods.tiklamaMethodu(541,1728,500);
+        ReusableMethods.tiklamaMethodu(772,1890,500);
     }
     @Given("{string} bolumune tiklayin")
     public void gelir_ekle_bolumune_tiklayin(String eklemeSecenegi) {

@@ -26,7 +26,7 @@ Feature: Kullanici aile Butcem uygulamasindaki gorevleri yerine getirir
 
      * sol kisimdaki menuden "Bize Ulasin" bolumune gidin
 
-
+  @ab
     Scenario: Kullanici gelir ekleme bolumundeki gorevleri yerine getirir
 
     * anasayfadaki arti butonuna tiklayin
@@ -50,7 +50,7 @@ Feature: Kullanici aile Butcem uygulamasindaki gorevleri yerine getirir
       *  Gelir ekleme sayfasinda tarih secme bolumunden 1 "26" tarih secimi yapilir
       *  Gelir ekleme sayfasinda tutar "1500" degeri girilir
       *  Gelir ekleme sayfasinda "Kaydet" butonuna tiklanir
-  @ab
+
     Scenario: Kullanici birikim ekleme kismindaki gorevleri yerine getirir
 
       *  anasayfadaki arti butonuna tiklayin
