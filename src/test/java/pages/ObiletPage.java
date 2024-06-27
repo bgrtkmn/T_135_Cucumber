@@ -20,5 +20,17 @@ public class ObiletPage {
     @FindBy(xpath = "(//*[@data-language='tr-TR'])[1]")
     public WebElement turkishLanguage;
 
+    @FindBy(xpath = "//*[@title='Currency Select']")
+    public WebElement currencySelect;
+
+    @FindBy(xpath = "(//*[@data-code='TRY'])[1]")
+    public WebElement turkisLira;
+
+    @FindBy(xpath = "//*[@id='search-button']")
+    public WebElement searchButton;
+
+    @FindBy(xpath = "(//span[@class='amount-sign'])[1]")
+    public WebElement fiyatTuru;
+
 
 }
