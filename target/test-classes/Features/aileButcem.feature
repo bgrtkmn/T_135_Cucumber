@@ -44,20 +44,20 @@ Feature: Kullanici aile Butcem uygulamasindaki gorevleri yerine getirir
 
       * anasayfadaki arti butonuna tiklayin
       * "Gider Ekle" bolumune tiklayin
-      * Gelir ekleme sayfasinda aciklama kismina "merhaba gider ekleme" gonderilir
+      *  Gelir ekleme sayfasinda aciklama kismina "merhaba gider ekleme" gonderilir
       *  Gelir ekleme sayfasinda Gelir tipi "Düzensiz" secilir
-      * Gelir ekleme sayfasinda Kategori bolumnden "Market" secilir
+      *  Gelir ekleme sayfasinda Kategori bolumnden "Market" secilir
       *  Gelir ekleme sayfasinda tarih secme bolumunden 1 "26" tarih secimi yapilir
       *  Gelir ekleme sayfasinda tutar "1500" degeri girilir
       *  Gelir ekleme sayfasinda "Kaydet" butonuna tiklanir
   @ab
     Scenario: Kullanici birikim ekleme kismindaki gorevleri yerine getirir
 
-      * anasayfadaki arti butonuna tiklayin
+      *  anasayfadaki arti butonuna tiklayin
       * "Birikim Ekle" bolumune tiklayin
-      * Gelir ekleme sayfasinda aciklama kismina "merhaba birikim ekleme" gonderilir
+      *  Gelir ekleme sayfasinda aciklama kismina "merhaba birikim ekleme" gonderilir
       *  Gelir ekleme sayfasinda Gelir tipi "Düzensiz" secilir
-      * Gelir ekleme sayfasinda Kategori bolumnden "Hisse Senedi" secilir
+      *  Gelir ekleme sayfasinda Kategori bolumnden "Hisse Senedi" secilir
       *  Gelir ekleme sayfasinda tarih secme bolumunden 3 "8" tarih secimi yapilir
       *  Gelir ekleme sayfasinda tutar "15000" degeri girilir
       *  Gelir ekleme sayfasinda "Kaydet" butonuna tiklanir
