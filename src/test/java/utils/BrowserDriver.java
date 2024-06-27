@@ -45,6 +45,10 @@ public class BrowserDriver {
              */
             // eger true olursa kullanicili bilgileri test bittikten sonra sifirlanmaz ve tercihler kaydedilir.Islemlere kaldiginiz yerden devam edilir
             caps.setCapability(MobileCapabilityType.BROWSER_NAME,"chrome");
+            // eger 47. satir chrome tarayicisini baslatmassa 51. satirdaki caps eklenmek zorundadir
+            // Burada onemli olan cep telefonunuzun chrome versionu ile ayni olan veya ona en yakin olan degeri indirip
+            // 51. satirdaki caps dosya olarak eklenmesi gerekmektedir
+            caps.setCapability("chromedriverExecutable","C:\\Users\\ahmet\\IdeaProjects\\T_135_Cucumber\\Driver\\chromedriver.exe");
 
 
             if (ConfigReader.getProperty("platformName").equals("Android")) {

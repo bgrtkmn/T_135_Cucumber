@@ -1,0 +1,24 @@
+package pages;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+import utils.BrowserDriver;
+import utils.Driver;
+
+public class ObiletPage {
+    public ObiletPage(){
+        PageFactory.initElements(BrowserDriver.getBrowserDriver(),this);
+    }
+
+    @FindBy(xpath = "(//button[@data-event-category='Main Menu'])[1]")
+    public WebElement hamburgerMenu;
+
+    @FindBy(xpath = "//*[@title='Language Select']")
+    public WebElement englishButton;
+
+    @FindBy(xpath = "(//*[@data-language='tr-TR'])[1]")
+    public WebElement turkishLanguage;
+
+
+}
